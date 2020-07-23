@@ -7,33 +7,36 @@
 <body>
 <p>Hiển thị các số nguyên tố:</p>
 <input id="num" type="number">
-<button onclick="isPrime()">Show</button>
-<div id="display"></div>
+<button onclick="checkIsPrime()">Show</button>
+<div id="display">sdfd</div>
 <script>
-    function isPrime() {
-        let arr = document.getElementById("num").value;
-        let sum = [];
-        for (let i = 0; i <= arr; i ++) {
+
+    function isPrime(num) {
+        let prime = false;
+        for (let i = 0; i <= num; i ++) {
             if (i>=2) {
                 if (i===2) {
-                    sum.push(i)
+                    prime = true;
                 }else {
-                   let prime = true;
                     for (let j = 2; j <= i/2; j++) {
                         if (i % j === 0) {
                             prime = false;
                             break;
+                        }else{
+                            prime = true;
                         }
                     }
-                    if (prime === true) {
-                            sum.push(i)
-                    }
-
                 }
             }
         }
-        document.getElementById("display").innerHTML = sum;
+        return prime;
     }
+    function checkIsPrime() {
+        let arr = document.getElementById("num").value;
+        document.getElementById("display").innerHTML = ":" + isPrime(arr);
+    }
+
+
 </script>
 </body>
 </html>
