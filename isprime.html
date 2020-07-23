@@ -34,6 +34,12 @@
     function checkIsPrime() {
         let arr = document.getElementById("num").value;
         document.getElementById("display").innerHTML = ":" + isPrime(arr);
+        let a = [];
+        for (let i = 2; i <= 7; i++) {
+            if (isPrime(i))
+            a.push(i);
+        }
+       console.log(a);
     }
 
 
