@@ -32,10 +32,12 @@
         return prime;
     }
     function checkIsPrime() {
+        // Hàm kiểm tra số đó có phải là số nguyên tố hay không
         let arr = document.getElementById("num").value;
         document.getElementById("display").innerHTML = ":" + isPrime(arr);
+        // Hàm Hiển thị các số nguyên tố từ 1 đến arr;
         let a = [];
-        for (let i = 2; i <= 7; i++) {
+        for (let i = 1; i <= arr; i++) {
             if (isPrime(i))
             a.push(i);
         }
